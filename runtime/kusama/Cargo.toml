@@ -74,6 +74,7 @@ pallet-utility = { git = "https://github.com/paritytech/substrate", default-feat
 pallet-vesting = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "polkadot-v0.9.14" }
 pallet-xcm = { path = "../../xcm/pallet-xcm", default-features = false }
 frame-election-provider-support = { git = "https://github.com/paritytech/substrate", default-features = false , branch = "polkadot-v0.9.14" }
+pallet-sudo = { git = "https://github.com/paritytech/substrate", branch = "polkadot-v0.9.14", default-features = false }
 
 frame-benchmarking = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true , branch = "polkadot-v0.9.14" }
 frame-try-runtime = { git = "https://github.com/paritytech/substrate", default-features = false, optional = true , branch = "polkadot-v0.9.14" }
@@ -156,6 +157,7 @@ std = [
 	"pallet-vesting/std",
 	"pallet-babe/std",
 	"pallet-xcm/std",
+	"pallet-sudo/std",
 	"sp-runtime/std",
 	"sp-staking/std",
 	"frame-system/std",
@@ -249,6 +251,7 @@ try-runtime = [
 	"pallet-utility/try-runtime",
 	"pallet-vesting/try-runtime",
 	"pallet-babe/try-runtime",
+	"pallet-sudo/try-runtime",
 	"runtime-common/try-runtime",
 ]
 # When enabled, the runtime API will not be build.
