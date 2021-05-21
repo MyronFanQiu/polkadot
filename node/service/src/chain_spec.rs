@@ -727,6 +727,7 @@ fn kusama_staging_testnet_config_genesis(wasm_binary: &[u8]) -> kusama::GenesisC
 			},
 		},
 		pallet_gilt: Default::default(),
+		pallet_sudo: kusama::SudoConfig { key: endowed_accounts[0].clone() },
 	}
 }
 
@@ -1291,7 +1292,7 @@ pub fn kusama_testnet_genesis(
 		AssignmentId,
 		AuthorityDiscoveryId,
 	)>,
-	_root_key: AccountId,
+	root_key: AccountId,
 	endowed_accounts: Option<Vec<AccountId>>,
 ) -> kusama::GenesisConfig {
 	let endowed_accounts: Vec<AccountId> = endowed_accounts.unwrap_or_else(testnet_accounts);
@@ -1416,6 +1417,7 @@ pub fn kusama_testnet_genesis(
 			},
 		},
 		pallet_gilt: Default::default(),
+		pallet_sudo: kusama::SudoConfig { key: root_key },
 	}
 }
 
