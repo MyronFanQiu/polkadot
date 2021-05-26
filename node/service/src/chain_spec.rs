@@ -1854,6 +1854,9 @@ fn kusama_local_testnet_genesis(wasm_binary: &[u8]) -> kusama::GenesisConfig {
 		vec![
 			get_authority_keys_from_seed_no_beefy("Alice"),
 			get_authority_keys_from_seed_no_beefy("Bob"),
+			get_authority_keys_from_seed_no_beefy("Charlie"),
+			get_authority_keys_from_seed_no_beefy("Dave"),
+			get_authority_keys_from_seed_no_beefy("Eve"),
 		],
 		get_account_id_from_seed::<sr25519::Public>("Alice"),
 		None,
